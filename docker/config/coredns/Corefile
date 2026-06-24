@@ -1,0 +1,10 @@
+. {
+    errors
+    log
+    # Docker embedded DNS (127.0.0.11) follows host/system DNS settings.
+    # This keeps container-name resolution and external resolution working.
+    forward . 127.0.0.11
+    cache 30
+    loop
+    reload
+}
